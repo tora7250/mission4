@@ -1,0 +1,17 @@
+<?php
+$dsn = 'mysql:dbname=tb240247db;host=localhost';
+    $user = 'xxxxx';
+    $password = 'xxxxxxx';
+    $pdo = new PDO($dsn, $user, $password, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+    
+  $sql = 'SELECT * FROM tbtest';
+    $stmt = $pdo->query($sql);
+    $results = $stmt->fetchAll();
+    foreach ($results as $row){
+        
+        echo $row['id'].'INT AUTO_INCREMENT PRIMARY KEY,';
+        echo $row['name'].'char(32),';
+        echo $row['comment'].' TEXT<br>';
+    echo "<hr>";
+    }
+    ?>

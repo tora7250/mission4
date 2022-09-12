@@ -1,0 +1,6 @@
+<?php
+$dsn = 'mysql:dbname=tb240247db;host=localhost';
+    $user = 'xxxxxxxxx';
+    $password = 'xxxxxxxxxX';
+    $pdo = new PDO($dsn, $user, $password, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+    ?>
